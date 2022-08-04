@@ -2,16 +2,13 @@ name: CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-    workflow_dispatch:
+
 jobs:  
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: java compile
-        run: javac Helloworld.java
-      - name: run the java app
-        run: java Helloworld
+      - name: Build with Maven
+        run: mvn package
+      
 
