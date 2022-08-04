@@ -18,5 +18,6 @@ jobs:
         run: mvn --version
       - name: docker version
         run: docker -v
-        
+      - name: terraform version
+        run: terraform --version
  
